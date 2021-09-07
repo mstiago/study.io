@@ -1,0 +1,24 @@
+<nb-layout windowMode [restoreScrollTop]="true">
+  <nb-layout-header fixed>
+    <div class="header-container">
+      <a class="logo" (click)="toggleCompact()" size="medium"
+        ><nb-icon icon="menu"></nb-icon
+      ></a>
+      <span class="navbar-brand h3 m-4"
+        >STUDY.IO <nb-icon icon="cube"></nb-icon
+      ></span>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar responsive>
+    <nb-menu [items]="items"> </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer>
+    <div class="text-center">Study.io © 2021 Todos os direitos reservados.</div>
+  </nb-layout-footer>
+</nb-layout>
