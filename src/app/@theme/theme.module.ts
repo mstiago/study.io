@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SkeletonComponent } from './components/navigation/skeleton/skeleton.component';
 
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import {
@@ -12,11 +11,15 @@ import {
   NbButtonModule,
   NbMenuModule,
   NbUserModule,
+  NbCardModule,
 } from '@nebular/theme';
 import { AppRoutingModule } from '../app-routing.module';
 
+import { HomePageComponent } from './components/pages/home-page/home-page.component';
+import { SkeletonComponent } from './components/navigation/skeleton/skeleton.component';
+
 @NgModule({
-  declarations: [SkeletonComponent],
+  declarations: [SkeletonComponent, HomePageComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -29,6 +32,7 @@ import { AppRoutingModule } from '../app-routing.module';
     NbButtonModule,
     NbMenuModule,
     NbUserModule,
+    NbCardModule,
   ],
   exports: [SkeletonComponent],
 })
