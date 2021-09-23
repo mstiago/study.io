@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/studyIo?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    password: ''
+  sql:
+    init:
+      mode: always
+      platform: mysql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          time_zone: UTC
+    hibernate:
+      ddl-auto: update
+app:
+  url: http://localhost:8080
